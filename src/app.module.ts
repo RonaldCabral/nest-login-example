@@ -15,8 +15,9 @@ import { User } from './entities/user.entity';
       username: 'root',
       password: '',
       database: 'login_nest_test',
-      entities: [__dirname + './**/**/*entity{.ts,.js'],
+      entities: [__dirname, '**', '*.entity.{ts,js}'],
       synchronize: true
+      
   }),
   TypeOrmModule.forFeature([User]),
   JwtModule.register({
